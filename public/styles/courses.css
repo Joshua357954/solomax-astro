@@ -1,0 +1,569 @@
+/* Montserrat Thin */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Thin.ttf");
+    font-weight: 100;
+}
+
+/* Montserrat Extra Light */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-ExtraLight.ttf");
+    font-weight: 200;
+}
+
+/* Montserrat Light */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Light.ttf");
+    font-weight: 300;
+}
+
+/* Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Regular.ttf");
+    font-weight: 400;
+}
+
+/* Montserrat Medium */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+/* Montserrat Semi-Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+/* Montserrat Extra Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+/* Montserrat Black */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Black.ttf");
+    font-weight: 900;
+}
+
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-Black.ttf"); 
+		font-weight: 900; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-Bold.ttf"); 
+		font-weight: 700; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-Light.ttf"); 
+		font-weight: 300; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-Regular.ttf"); 
+		font-weight: 400; 
+	} 
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-SemiBold.ttf"); 
+		font-weight: 600; 
+	} 
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../assets/fonts/SoDoSans-Thin.ttf"); 
+		font-weight: 100; 
+	} 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: none;
+	/* font-family: 'Rubik',sans-serif; */
+	/* font-family: 'Lato', sans-serif;
+	font-family: 'Quicksand', sans-serif; */
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	font-family: 'SoDoSans',"Helvetica Neue", Helvetica, Arial,sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+:root{
+	--yellow:#fbffa7;
+	--red:#ff764d;
+	--lightblue:#b1c5ff;
+	--purple:#d5b3ff;
+	--green:#b6ffc0;
+	--darkblue:#074D85;
+}
+
+body{ 
+	/* user-select: none; */
+	padding: 0;
+	margin: 0;
+	background-color: white; 
+	color: white;
+}
+
+
+
+
+.li-img{
+	width: 20px;
+	height: 20px;
+}
+
+
+/*  Courses Header */
+
+.courses_header {
+	/* height: 500px; */
+
+	margin-top: 100px;
+	/* width: 100%; */
+	/* background-color: greenyellow; */
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	gap: 30px;
+	color: black !important;
+	border-bottom: 1px solid #f9f9f9;
+	transition: all .5s ease-in-out;
+	margin-bottom: 2rem;
+}
+
+.header_title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;	
+	
+}
+
+.h1 {
+	text-transform: capitalize;
+	font-size: 1.8rem;
+	margin: 0 30px;
+}
+
+.header_title img {
+	width: 70px;
+}
+
+.headerNav {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0 20px;
+}
+
+
+
+.headerNav li { 
+	border-bottom: 2px solid transparent;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.headerNav li:first-child {
+	border-bottom: 2px solid red;
+}
+
+.headerNav li:hover, .headerNav li:active { 
+	border-bottom: 2px solid red;
+	transition: all .5s  ease-in-out
+}
+
+.headerNav ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	width: 100%;
+
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	/* margin-bottom: 20px; */
+}
+
+select {
+  padding: 3px 5px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: .3rem;
+  cursor: pointer;
+  outline: none;
+  /*margin-left: 5px;  Added margin to separate the image */
+}
+
+select:focus {
+	border-color: red;
+}
+
+.mentorship_box {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+	color: black;
+	padding:20px 80px;
+	width: 100%;
+	border: 2px solid #fcfcfc;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.mentorship_box h7{
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+}
+
+.mentorship_box p {
+	line-height: 2.5;
+	letter-spacing: 1.5px;
+	font-size: 17px;
+	text-align: center;
+}
+
+.mentorship_box a {
+	padding: 15px 5px ;
+	width: 180px;
+	font-weight: 600;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 1.2rem;
+	border-radius: .2rem; 
+	background-color: #0C5395; 
+	color: white !important;
+}
+
+
+/* Courses Main */
+.courses_box {
+	width: 100%;
+	/* height: ; */
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	padding:0 17px;
+	place-items: center;
+	gap: 20px;
+	margin: 30px auto;
+	max-width: 1300px;
+}
+
+.yt-card {
+
+	max-width: 100%;
+	max-height:400px;
+	height: 370px;
+	background-color: #fcfcfc;
+	border-radius: .3rem;
+	box-shadow: 0 24px 48px 0 rgb(0,0,0,.1);
+	padding-bottom: 10px;
+}
+
+.yt_video {
+	height:	200px;
+	width: 100%;
+	background-color: black;
+	border-top-left-radius: .3rem;
+	border-top-right-radius: .3rem;
+	margin-bottom: 5px;
+}
+
+.yt-card h2 {
+	padding: 5px 10px;
+	color: black;
+	text-size-adjust: auto;
+}
+.yt-card strong {
+	margin-left: 10px;
+	text-transform: capitalize;
+	color: #0C5395 !important;
+}
+
+.yt-card p {
+	margin: 2px 10px;
+	color: black;
+	font-weight: 300;
+	text-size-adjust: auto;
+}
+
+
+
+
+.premium_card {
+	width: 100%;
+	height: 370px;
+	box-shadow: 0 24px 48px 0 rgb(0,0,0,.1);
+	border-radius: .3rem;
+	border-bottom: 1px solid red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.premium_box1{
+	height: 150px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .9);
+}
+
+.premium_box2 {
+	color: black;
+	padding: 10px ;
+	background-color: #fcfcfc;
+}
+
+.p_price {
+	font-size: 18px;
+	padding: 3px;
+	font-weight: 900;
+	color: rgba(0, 0, 0, .8);
+}
+.p_category {
+	font-weight: 400;
+	padding: 3px;
+	font-size: 18px;
+	color: rgba(0, 0, 0, .65);
+}
+
+.premium_box2 button{
+	display: block;
+	width: 100%;
+	border-radius: .2rem;
+	background: none;
+	background-color: #fcfcfc;
+	border: 2px solid black;
+	color: black;
+	padding: 10px 5px ;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	justify-content: center;
+	margin: 5px 0; 
+	/* background-color:white;	  */
+}
+
+
+.pbtn:last-child {
+	margin-bottom: 10px;
+	color: white;
+	background-color:#0C5395 !important; 
+	font-size: 1rem; 
+	border: 2px solid white;
+	font-weight: 600;
+
+}
+
+
+
+
+@media (max-width: 720px){
+
+	body{
+		overflow-x: none;
+	}
+
+	/* .mentorship_box p {
+		text-align: left;
+	} */
+	
+	.navmenu-icon{
+		z-index: 944;
+		display: flex;
+		position: fixed;
+		width: 30px;
+		height: 30px;
+		top:20px;
+		right: 30px;
+	}
+
+	.nav_img_box{
+		width: 150px ;
+		height: 25px;
+		position: fixed;
+		top: 10px;
+		left: 0;
+		z-index: 130;
+	}
+
+	.navbar {
+		position: sticky;
+		top:0;
+		/* bottom:0; */
+		width:100%;
+		background-color: #fcfcfc /*red*/   ;
+		align-items: center;
+		z-index: 240;
+		transition: all .3s ease-in-out;
+	}
+
+	.nvb {
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding-top: 65px;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		background-color: #fcfcfc;
+		height: 700px;
+		justify-content: center;
+		transition: height 1s ease-in-out;
+	}
+
+	.nav_img_box{
+		margin-top: 17px;
+		margin-left: 40px;
+	}
+
+	.nvb {
+		display: none;
+	}
+
+
+	.nvb.active {
+		display: unset;
+	}
+
+	.bg-oo {
+		background-color: transparent !important ;
+	}
+
+	.bg-ol {
+		background-color: #fcfcfc !important ;
+	}
+
+
+	.nvb.active li {
+		color: black;
+		margin: 0 auto;
+		text-align: center;
+		gap: 5.5px;
+	}	
+
+
+	/* Nav Links */
+	.navlinks_box li a {
+		color:black  ;	
+	}
+
+	.nvb li p {
+		font-size: 15px;
+	}
+
+	.li-img{
+		width: 20px;
+		height: 20px;
+	}
+
+
+	.navlinks_box li{
+		padding: 5px 0;
+		text-align: center;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.last_link {
+		text-align: center;
+		color: white !important;
+		padding: 8px 7px !important ; 
+		/* margin: 0 auto; */
+		
+	} 
+
+	.courses_box {
+		grid-template-columns: repeat(2,1fr);
+	}
+
+	.courses_header {
+		margin-top: 40px;
+		gap: 40px;
+	}
+
+}
+
+
+
+
+@media (max-width:550px){
+
+	h1{
+		gap: 10px;
+	}
+	.courses_box {
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	/* .mentorship_box p {
+		text-align: left;
+	} */
+
+	.yt_video {
+		height:	180px;
+	}
+
+	.header_title {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.yt-card{
+		max-width: unset;
+		width: -webkit-fill-available;
+		height: 350px;
+	}
+
+	.footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+}

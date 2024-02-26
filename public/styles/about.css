@@ -1,0 +1,206 @@
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Black.ttf"); 
+	font-weight: 900; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Bold.ttf"); 
+	font-weight: 700; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Light.ttf"); 
+	font-weight: 300; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Regular.ttf"); 
+	font-weight: 400; 
+} 
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-SemiBold.ttf"); 
+	font-weight: 600; 
+} 
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Thin.ttf"); 
+	font-weight: 100; 
+}
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: none;
+	font-family:'SoDoSans','Rubik', sans-serif;
+}
+
+
+body{
+	/*width: 100vw;*/
+	min-height: 100vh;
+	
+}
+
+.reduce {
+	width: 16.5px;
+	height: 16.5px;
+}
+
+.s-one {
+	margin-top: 4rem;
+	padding: 50px 20px;
+	color: black;
+}
+
+.s-one h1 {
+	font-weight: 800;
+	font-size: 3rem;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.s-two {
+	display: flex;
+	padding: 80px 20px;
+	width: 100%;
+	background-color: #f9f9f9;
+}
+
+
+.s-two ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.s-two ul li{
+	line-height: 1.8;
+	letter-spacing: 1px;
+}
+
+.s-two div{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 50%;
+}
+
+.s-two div h2{
+	font-size: 3rem;
+	color: #f9f9f9;
+	-webkit-text-stroke: 3px black;
+	text-stroke: 3px black;
+}
+
+
+.s-three {
+	padding: 30px 20px;
+	line-height: 1.6;
+	font-size: 1.3rem;
+	letter-spacing: .9px;
+}
+
+
+.s-four {
+	display: flex;
+	width: 80%;
+	gap:30px;
+	margin: 0 auto;
+	padding: 30px 15px;
+	justify-content: space-around;
+}
+
+
+.s-four div{
+	display: flex;
+	gap:30px;
+	margin: 0 auto;
+	padding: 30px 20px;
+	background-color: #f9f9f9;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.s-four div h2{
+	padding: 0 30px;
+	line-height: 1.5;
+	letter-spacing: .08rem;
+}
+
+.s-four div button {
+	padding: 20px 30px;
+	background-color: #467fbc;
+	color: white;
+	/* height: 50%; */
+	text-align: center;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+li{
+    color:black;
+}
+
+.s-three p {
+    color: black;
+}
+
+.s-four {
+    color:black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+	.s-two {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.s-two div {
+		width: 100%;
+
+	}
+
+	.s-four div {
+		/* width: 50%; */
+		padding: 30px 10px;
+	}
+
+	.s-four {
+		display: flex;
+		width: 100%;
+		gap:10px;
+	}
+
+	.s-four div h2{
+		padding: 0 1px;
+		line-height: 1.4;
+		font-size: 1.2rem;
+		font-weight: 600
+	}
+
+	.s-four div button {
+		padding: 20px 20px;
+		/* height: 65%; */
+	}
+}
+
+

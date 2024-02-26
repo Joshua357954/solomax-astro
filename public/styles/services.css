@@ -1,0 +1,250 @@
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Black.ttf"); 
+	font-weight: 900; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Bold.ttf"); 
+	font-weight: 700; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Light.ttf"); 
+	font-weight: 300; 
+} 
+
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Regular.ttf"); 
+	font-weight: 400; 
+} 
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-SemiBold.ttf"); 
+	font-weight: 600; 
+} 
+
+@font-face { 
+	font-family: 'SoDoSans'; 
+    src:url("../fonts/SoDoSans-Thin.ttf"); 
+	font-weight: 100; 
+}
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: none;
+	font-family: 'SoDoSans',"Helvetica Neue", Helvetica, Arial,sans-serif;
+	/* font-family: 'SoDoSans',"Helvetica Neue", Helvetica, Arial,sans-serif; */
+}
+
+
+
+header {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: #fcfcfc; */
+	border-bottom: 2px solid #fcfcfc;
+	/* color: white; */
+}
+
+header h1 {
+	font-size:2.3rem;
+	font-weight:900;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+}
+
+.section_one {
+	margin: 20px 0 ;
+	padding: 0 10px;
+	line-height: 1.8;
+	width: 100%;
+
+}
+
+.main {
+	padding: 0 10px;
+	width: 100%;
+	display: flex;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+
+
+
+/* Service Card */
+.service_card {
+	flex-basis: 250px;
+	height: 300px;
+	flex-grow: 1;
+	position: relative;
+	margin: 0px 0px 0px 0px  ;
+	background-color: black;
+}
+
+
+.service_card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-size: cover;
+	
+}
+
+
+
+/* Style for the overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Style for the clickable text in the overlay */
+.overlay-text {
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
+  /* background-color: yellow; */
+  margin: 0 20px 40px 20px ;
+  width: 40%;
+}
+
+.overlay small {
+	font-size: 15px;
+	font-weight: 300;
+}
+/* Show the overlay on hover */
+.service_card:hover .overlay {
+  opacity: 1;
+  
+}
+
+/* Line */
+.service_card:hover .line {
+  width: 90%;
+  height: 2px;
+  margin-top: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+@keyframes expandAndContract {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.service_card:hover .line {
+  animation: expandAndContract 1.3s linear ;
+}
+
+
+
+
+
+/* Last */
+.last {
+	height: 280px;
+	width: 100%;
+	padding: 0 10px;
+	margin :40px 0px;
+
+}
+
+.last div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+	height: 100%;
+	background-color:#f9f9f9/*  #467fbc */; 
+	text-align: center;
+	border-radius: .3rem;
+	padding: 30px 20px;
+}
+
+.last div section {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.last h2 {
+	color: black;
+	font-size: 1.6rem;
+	letter-spacing: 1.2px;
+	font-weight: 800;
+}
+
+.last button {
+	background-color: #467fbc;
+	padding: 13px 23px;
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 400;
+	/* border-radius: .2rem; */
+}
+
+
+
+@media screen and (max-width: 768px) {
+	header h1 {
+		font-size: 2.5rem;
+	}
+	/*  Navbar */
+
+	header h1 {
+		font-size: 3rem;
+	}
+
+	.footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+
+    .last button {
+		background-color: #467fbc;
+		padding: 15px 23px;
+	}
+
+	.last div {
+		padding: 40px 15px;
+	}
+}
+

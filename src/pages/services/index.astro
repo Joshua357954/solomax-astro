@@ -1,0 +1,87 @@
+---
+import Footer from "../../components/Footer.astro";
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<Head title="Services">
+    <link rel="stylesheet" href="/styles/services.css">
+</Head>
+
+<Navbar/>
+
+<header>
+    <h1> &nbsp;</h1><br>
+</header>
+
+<section class="main">
+  {[
+    {
+      image: 'https://www.xanegraphics.com/assets/images/untitled54-copy-1566x881.jpg',
+      title: 'Photo Rel',
+      description: 'solomax',
+    },
+    {
+      image: 'https://www.xanegraphics.com/assets/images/8-slim-800x1000.jpeg',
+      title: 'Expalainer',
+      description: 'solomax',
+    },
+    {
+      image: 'https://www.xanegraphics.com/assets/images/13-1566x1958.jpeg',
+      title: 'MO CAP',
+      description: 'solomax',
+    },
+    {
+      image: 'https://www.xanegraphics.com/assets/images/draft3-1-1920x1080.jpg',
+      title: 'Short Films',
+      description: 'solomax',
+    },
+    {
+      image: 'https://www.xanegraphics.com/assets/images/snapinsta.app-1080-330783830-713263780473003-286950568065176597-n-816x1020.jpeg',
+      title: 'Illustration',
+      description: 'solomax',
+    },
+    {
+      image: 'https://www.xanegraphics.com/assets/images/oculus-quest-2-trans-nvbqzqnjv4bq43em2yt1o8-t0dqimshwlzefnkclbrs59rocriyopne-680x425.jpg',
+      title: 'VFX',
+      description: 'solomax',
+    },
+  ].map((service, index) => (
+      
+      <div class="service_card" >
+        <img src={service.image} alt={service.title} />
+
+        <div class="overlay">
+          <a class="overlay-text">
+            {service.title} <br />
+            <div class="line"></div>
+            <small>{service.description}</small>
+          </a>
+        </div>
+      </div>
+  ))}
+  
+</section>
+
+<section class="last">
+  <div>
+    <section>
+      <h2>Got interested in our Latest works ?</h2>
+      <h2>Let's create a video for you !</h2>
+    </section>
+
+    <button>
+      Contact Us!
+    </button>
+  </div>
+</section>
+
+<Footer/>
+
+<script src="/js/main.js" is:inline></script> 
+</body>
+</html>

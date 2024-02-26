@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+import Footer from "../../components/Footer.astro";
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+// import Blogcard from "../../components/Blogcard.astro";
+import BlogReact from "./_blog.jsx"
+
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+);
+console.log(posts)
+
+---
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <Head title="Blog">
+        <link rel="stylesheet" href="/styles/blog.css"/>
+    </Head>
+
+    <body>
+    
+        <Navbar/>
+
+        <div style="margin-top: 8rem;">
+
+        </div>
+    <!-- 
+        <header class="header">
+            <h1 class="blog-title"> Blog </h1>
+            
+            <ul class="header-categories">
+                <li onclick="">All</li>
+                <li>Latest</li>
+                
+                <div class="filter">   
+                    <select id="dropdownSelect">
+                        <option value="" disabled selected>Filter By:</option>
+                     
+                        {
+                          [...new Set(posts.map(item => item.data.category.toLowerCase()))].map((category, idx) => (
+                            <option value={category}>{category}</option>
+                          ))
+                        }
+                        
+                    </select>
+    
+                    <img class="li-img" src="images/filter-edit-svgrepo-com.svg" alt="Filter Icon">
+                </div>
+            </ul>
+    
+        </header>
+
+
+        <main class="blog_container">
+         
+          {
+            posts.map((post, idx) => {
+              return <Blogcard post={post} key={idx} />;
+            })
+          }
+                    
+        </main> -->
+
+        <BlogReact allData={posts} client:load/>
+
+        <Footer/>
+
+        <!-- <script src="../mdParser.js" async></script> -->
+        <script src="/js/main.js" is:inline></script>
+    </body>
+
+</html>

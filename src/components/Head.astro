@@ -1,0 +1,24 @@
+---
+const { title } = Astro.props;
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <slot/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2PWNNYFVC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C2PWNNYFVC');
+    </script>
+
+</head>
