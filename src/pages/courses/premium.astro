@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Footer from "../../components/Footer.astro";
+import Head from "../../components/Head.astro";
+import Navbar from "../../components/Navbar.astro";
+import Container from "./container";
+
+const premiumPosts = (await getCollection('premiumCourses')).sort(
+  (a, b) => (a.data.date?.valueOf() || 0) - (b.data.date?.valueOf() || 0)
+);
+
+const premiumImg = '/images/new_premium.svg';
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<Head title="Courses">
+    <link rel="stylesheet" href="/styles/courses.css">
+    <link rel="stylesheet" href="/styles/services.css">
+</Head>
+
+<body>
+
+      
+  <Navbar/>
+
+  <div style="margin-top: 8rem;">
+
+  </div>
+    
+  <div class="header_title">
+    <img class="csh_img" src={premiumImg} alt="Header Image" />
+    <h1 class="h1" style={{ color: 'black' }}>
+        Premium
+    </h1>
+  </div>
+
+  
+  <Container data={premiumPosts} client:load/>
+  
+
+  <Footer/>
+
+  <script src="/js/main.js" is:inline></script>
+
+</body>
+</html>

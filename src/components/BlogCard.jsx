@@ -28,7 +28,7 @@ export default function BlogCard({ fullData }) {
                 </div>
 
                 <div className="bc_meta" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '13px', marginBottom: '15px', marginLeft: '10px' }}>
-                    <img className="img" src={data.avatarUrl || '/images/So-max_Mountain.png'} alt="Author image" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'contain', padding: '2px', backgroundColor: 'rgba(0, 0, 0, 0.05)' }} />
+                    <img className="img" src={data.avatarUrl} srcSet='/images/So-max_Mountain.png' alt="Author image" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'contain', padding: '2px', backgroundColor: 'rgba(0, 0, 0, 0.05)' }} />
 
                     <div className="data" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', height: '100%' }}>
                         <p style={{ fontSize: '14px', fontWeight: 400, color: 'rgb(130, 130, 130)' }}>{data.author}</p>

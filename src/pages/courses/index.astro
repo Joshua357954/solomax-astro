@@ -1,12 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import Footer from "../../components/Footer.astro";
 import Head from "../../components/Head.astro";
 import Navbar from "../../components/Navbar.astro";
+import container from './container.jsx'
 
-// const params = new URLSearchParams(window.location.search).get('course_type');
 
-// const getQueryParam = params.get('get');
-const params = ''
+
+const mentorshipImg = '/images/new_mentor.svg';
 ---
 
 
@@ -25,53 +26,22 @@ const params = ''
     <div style="margin-top: 8rem;">
 
     </div>
-    
+
     <div class="header_title">
-        <img class="csh_img" src="">
-        <h1 class="h1"></h1>
+        <img class="csh_img" src={mentorshipImg} alt="Header Image" />
+        <h1 class="h1" style={{ color: 'black' }}>
+            Mentorship
+        </h1>
     </div>
-
-<!-- 
-	<section class="courses_header">
-		
-	
-        <section class="headerNav">
-			<img  class="li-img" src="/images/search-svgrepo-com.svg">
-
-			<ul class="selection">
-				<li onclick="filterCourses('all')">All</li>
-				<li>Latest</li>
-			</ul>
-
-			<div class="filter">
-			    <img class="li-img" style="width: 20px;" src="/images/filter-list-svgrepo-com.svg" alt="Filter Icon">
-			 
-				<select id="dropdownSelect">
-					<option value="" disabled selected>Filter By:</option>
-				</select>
-			</div>
-
-		</section>`
-
-	</section> -->
-
-    {params === "premium" ? 
-        <section class="mentorship_box">
-            {/* Content for "premium" */}
-        </section> 
-    : 
-    params === "youtube" ? 
-        <section>
-            {/* Content for "youtube" */}
-        </section>
-    :  
+   
+  <container client:load/>
+   
+ 
     <section class="mentorship_box">
         <h7>Unlock Your Potential with Personalized Mentorship ☃️ !</h7>
         <p>Our seasoned mentors are ready to guide you on your journey. Whether you're navigating your career, mastering new skills, or pursuing personal growth, our mentorship program provides personalized support🚀. Connect with mentors who share your passions and let's embark on this transformative journey together. Elevate your life—begin your mentorship experience now! 🌟.</p>
         <a href="/" style={{ textAlign: 'center' }}>Get In Touch</a>
     </section>
-
-    }
 
 
 	<!-- Cards ..... -->
@@ -88,23 +58,3 @@ const params = ''
 </body>
 </html>
 
-<script>
-    const youtubeImg = '/images/youtube-you-tube-video-svgrepo-com.svg'
-
-    const premiumImg = '/images/new_premium.svg'
-
-    const mentorshipImg = '/images/new_mentor.svg'
-
-
-    const params = new URLSearchParams(window.location.search).get('course_type');
-    const ht = document.querySelector('.header_title')
-
-    ht.insertAdjacentHTML('beforeend',
-        `<div class="header_title">
-			<img class="csh_img" src=${params == 'youtube' ? youtubeImg : params == 'premium' ? premiumImg : mentorshipImg}>
-			<h1 class="h1" style="color:black; text-align:center, margin: 0 auto;">${params ? params :  "Mentorship"}</h1>
-		</div>`
-    )
-    console.log(params)
-
-</script>
