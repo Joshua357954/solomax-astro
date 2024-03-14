@@ -18,7 +18,7 @@ export default function BlogCard({ fullData }) {
 
     return (
         <div className="blog-card" style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', fontSize: '25px', fontWeight: 500, backgroundColor: 'white', color: 'rgb(0, 0, 0)', borderRadius: '0.4rem', height: '480px', minHeight: '350px', marginBottom: '20px', minWidth: '210px', boxShadow: '0 24px 48px 0 rgb(0, 0, 0, 0.1)', transition: 'all 0.5s ease-in-out' }}>
-            <a href={`blog/${slug}`} className="between" style={{ color: 'black', width: '100%', height: '100%', textDecoration: 'none', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <a href={`blog/${slug}`} className="between" style={{ color: 'black', width: '100%', height: '100%', textDecoration: 'none', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div className="bc_inner" style={{ width: '100%', height: '100%' }}>
                     <div className="bc_img" style={{ ...imgStyle, backgroundImage: `url('${data.imageUrl}')` }}></div>
                     <ul style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', fontSize: '15px', fontWeight: 'bolder', gap: '5px', color: '#467fbc', padding: '15px 10px' }}>

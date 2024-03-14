@@ -33,7 +33,7 @@ export default function Container({ data }) {
                 Filter By:
               </option>
               {Array.from(new Set(data.map((item) => item.data.category))).map((category) => (
-                <option className='capitalize' key={category} value={category}>{category}</option>
+                <option style={{'textTransform':'capitalize'}} key={category} value={category}>{category}</option>
               ))}
               <option value={'all'}>All</option>
             </select>

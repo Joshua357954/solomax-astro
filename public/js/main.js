@@ -19,12 +19,12 @@ const nav_icon = document.querySelector('.navmenu-icon')
 
 		if (mobile_nav.classList.contains('active')){
 			// navbar.style.height = '100vh';
-		    nav_icon.src = './assets/images/close-svgrepo-com.svg' 
+		    nav_icon.src = '/images/close-svgrepo-com.svg' 
 		    // navbar.style.backgroundColor = 'red';
 		}
 		else{
 			// navbar.style.height = '70px';
-		    nav_icon.src = './assets/images/menu (3).svg';
+		    nav_icon.src = '/images/menu (3).svg';
 		}
 	} )
 
