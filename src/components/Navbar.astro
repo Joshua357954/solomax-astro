@@ -12,48 +12,39 @@
             <img class="navmenu-icon" src="/images/menu (3).svg">
             
             <ul class="nvb">
-                <a class="li" href="/">
-                    <li class="ls">
-                        <img class="li-img" src="/images/new_home.svg">
-                        <p>Home</p>
-                    </li>
+                
+				<a class="li" href="/" style="background-color: ;">
+					<img class="li-img" src="/images/new_home.svg">
+					Home
                 </a>
 
                 <a class="li" href="/blog">
-                    <li class="ls">
-                        <img class="li-img reduce" src="/images/new_blog.svg">
-                        <p>Blog</p>
-                    </li>
+					<img class="li-img reduce" src="/images/new_blog.svg">
+					Blog
                 </a>
 
                   <a class="li" href="/about">
-                    <li class="ls">
-                        <img class="li-img" src="/images/new_about.svg">
-                        <p>About</p>
-                    </li>
+					<img class="li-img" src="/images/new_about.svg">
+					About
                 </a>
 
                 <a class="li" href="/services">
-                    <li class="ls">
-                        <img class="li-img" src="/images/new_services.svg">
-                        <p>Services</p>
-                    </li>
+					<img class="li-img" src="/images/new_services.svg">
+					Services
                 </a>
 
 
                 <a class="li" id="projects">
-                    <li class="ls">
-                       <img class="li-img" src="/images/new_courses.svg">
-                       
-                       <p class="li">Courses 
-                               <img class="caret" src="/images/car-d (3).svg">
-                       </p>					
-                    </li>
+					<img class="li-img" src="/images/new_courses.svg">
+					
+					<p class="li" style="color: black;">Courses 
+						<img class="caret" src="/images/car-d (3).svg">
+					</p>	
                 </a>
 
    
-                <li><a class="last_link" href="#contact">Get a quote</a></li>
-            
+                <a class="last_link" href="#contact">Get a quote</a>
+				
             </ul>
         </div>
 
@@ -249,16 +240,15 @@ video {
 	align-items: center;
 	/* padding-right: 10px; */
 	max-height: 400px;
+	gap: 15px;
 	transition: all 1s linear,
 }
 
-.navlinks_box li{
-	list-style: none;
-	margin:0 0 0 25px;
+
+.nvb a {
 	display: flex;
+	gap:7px;
 	align-items: center;
-	gap: 4.5px;
-	font-size: 15px;	
 }
 
 .li-img{
@@ -272,16 +262,6 @@ video {
 }
 
 
-.nvb li {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.nvb li p {
-	margin-top: 5px;
-	color: black;
-}
 
 .nvb a:-webkit-any-link {
 	text-decoration:none;
@@ -289,7 +269,7 @@ video {
 }
 
 .last_link {
-	padding: 10px 9px !important ;
+	padding: 10px !important ;
 	border-radius: .2rem; 
 	background-color: #0C5395; 
 	color: white !important;
@@ -361,50 +341,43 @@ video {
 
 .nvb {
 	display: none;
+	gap:7px;
 }
 
 
 .nvb.active {
-	display: unset;
+	display: flex;
 }
 
-.bg-oo {
-	background-color: transparent !important ;
-}
-
-.bg-ol {
-	background-color: #fcfcfc !important ;
-}
-
-
-.nvb.active li {
-	color: black;
-	margin: 0 auto;
-	text-align: center;
-	gap: 5.5px;
-}	
 
 
 /* Nav Links */
-.navlinks_box li a {
-	color:black  ;	
+.navlinks_box a {
+	color:black ;	
+	display: flex;
+	width: 150px;
+	padding: 5px 0 ;
+	margin-top: 10px;
+	justify-content: flex-start;
+	gap:20px ;
 }
 
 .nvb li p {
 	font-size: 15px;
 }
 
-.li-img{
-	width: 20px;
-	height: 20px;
+
+.reduce {
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
 }
 
-
-.navlinks_box li{
-	padding: 5px 0;
-	text-align: center;
-	width: 100%;
+.last_link {
 	justify-content: center;
+	align-items: center;
+	width:fit-content !important;
+	padding: 10px 30px!important;
 }
 
 }
