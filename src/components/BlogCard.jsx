@@ -10,6 +10,7 @@ export default function BlogCard({ fullData }) {
     const imgStyle = {
         width: '100%',
         height: '50%',
+        backgroundPosition:'center',
         backgroundSize: 'cover',
         borderTopRightRadius: '0.6rem',
         borderTopLeftRadius: '0.6rem',

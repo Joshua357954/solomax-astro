@@ -5,6 +5,7 @@ import Head from "../../components/Head.astro";
 import Navbar from "../../components/Navbar.astro";
 // import Blogcard from "../../components/Blogcard.astro";
 import BlogReact from "./_blog.jsx"
+import Space from '../../components/Space.astro'
 
 
 const posts = (await getCollection('posts')).sort(
@@ -27,9 +28,7 @@ console.log(posts)
     
         <Navbar/>
 
-        <div style="margin-top: 8rem;">
-
-        </div>
+        <Space/>
     <!-- 
         <header class="header">
             <h1 class="blog-title"> Blog </h1>
