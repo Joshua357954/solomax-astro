@@ -1,13 +1,16 @@
 
+
 if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
+  window.netlifyIdentity.on("init", (user) => {
+      if (user) {
           document.location.href = "/admin/";
-        });
+      } else {
+          window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+          });
       }
-    });
-  }
+  });
+}
 
 const nav_icon = document.querySelector('.navmenu-icon') 
 	const mobile_nav1 = document.querySelector('.navlinks_box')
