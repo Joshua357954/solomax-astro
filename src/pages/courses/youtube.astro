@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar.astro";
 import Container from "./_container";
 import Space from "../../components/Space.astro";
 
-const youtubePosts = (await getCollection('YoutubeCourses')).sort(
+const youtubePosts = (await getCollection('youtubeCourses')).sort(
   (a, b) => (a.data.date?.valueOf() || 0) - (b.data.date?.valueOf() || 0)
 );
 

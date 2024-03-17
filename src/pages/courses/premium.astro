@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar.astro";
 import Container from "./_container";
 import Space from "../../components/Space.astro";
 
-const premiumPosts = (await getCollection('PremiumCourses')).sort(
+const premiumPosts = (await getCollection('premiumCourses')).sort(
   (a, b) => (a.data.date?.valueOf() || 0) - (b.data.date?.valueOf() || 0)
 );
 
