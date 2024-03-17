@@ -4,9 +4,10 @@ import { getCollection } from "astro:content";
 import Footer from "../../components/Footer.astro";
 import Head from "../../components/Head.astro";
 import Navbar from "../../components/Navbar.astro";
-import Container from "./container";
+import Container from "./_container";
+import Space from "../../components/Space.astro";
 
-const youtubePosts = (await getCollection('youtubeCourses')).sort(
+const youtubePosts = (await getCollection('YoutubeCourses')).sort(
   (a, b) => (a.data.date?.valueOf() || 0) - (b.data.date?.valueOf() || 0)
 );
 
@@ -29,9 +30,7 @@ const youtubeImg = '/images/youtube-you-tube-video-svgrepo-com.svg';
       
   <Navbar/>
 
-  <div style="margin-top: 8rem;">
-
-  </div>
+  <Space/>
     
   <div class="header_title">
     <img class="csh_img" src={youtubeImg} alt="Header Image" />
@@ -47,4 +46,4 @@ const youtubeImg = '/images/youtube-you-tube-video-svgrepo-com.svg';
   <script src="/js/main.js" is:inline></script>
 
 </body>
-</html>
+</html>./_container
