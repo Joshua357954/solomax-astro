@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FilterImg from '../../../public/images/filter-edit-svgrepo-com.svg'
 import BlogCard from "../../components/BlogCard.jsx";
 
 export default function Blog({ allData }) {
@@ -42,7 +43,7 @@ export default function Blog({ allData }) {
               }
               <option value="">All</option>
             </select>
-            <img className="li-img" src="images/filter-edit-svgrepo-com.svg" alt="Filter Icon" />
+            <img className="li-img" src={FilterImg} alt="Filter Icon" />
           </div>
         </ul>
 
