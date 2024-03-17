@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import FilterImg from '../../../public/images/filter-edit-svgrepo-com.svg'
+import FilterImg from '/images/filter-edit-svgrepo-com.svg?url'
 import BlogCard from "../../components/BlogCard.jsx";
 
 export default function Blog({ allData }) {
